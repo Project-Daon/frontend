@@ -15,12 +15,21 @@ body {
 
 #root {
   max-width: 390px;
+  position: relative;
   width: 100%;
   height: 100vh;
-  background-color: white;
+  color: white;
+  background-color: #18171C;
   overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
+
+  --color-black: #18171C;
+  --color-gray: #3A393D;
+  --color-primary-dark: #3A393D;
+  --color-primary: #CBBEFF;
+  --color-right-gray: #6D6D6D;
+  --color-modal: #242327;
 }
 
 #root::-webkit-scrollbar {
