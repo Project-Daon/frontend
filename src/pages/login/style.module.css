@@ -134,3 +134,33 @@
     border-radius: 1.2em;
     margin-top: 20px;
 }
+
+.email_btn {
+    background-color: var(--color-primary);
+    color: #000;
+    font-weight: 800;
+    text-align: center;
+    padding: 15px;
+    border-radius: 0.9em;
+}
+
+.icons {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 5px;
+}
+
+.level_tag {
+    background-color: #0B0B97;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 1.2em;
+    margin-left: 5px;
+}

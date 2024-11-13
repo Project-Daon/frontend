@@ -6,11 +6,11 @@ import style from "./style.module.css";
 
 const LoginPage = () => {
     const [n, setN] = useState(0);
-    const Pages = [<LoginFristComponent />, <LoginSecondComponent />, <LoginThirdPage />];
+    const Pages = [<LoginFristComponent />, <LoginSecondComponent />, <LoginThirdPage />, <LoginThirdPage />];
 
     return (
         <div>
-            {n == 2 ? <SelectMenu /> : null}
+            {n == 2 ? <SelectMenu num={n} setNum={setN} /> : null}
             <div className={style.page_container}>
                 {Pages[n]}
                 {n < 2 && (

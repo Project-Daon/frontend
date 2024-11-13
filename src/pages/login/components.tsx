@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import React, { SetStateAction, useEffect, useState } from "react";
 import style from "./style.module.css";
 import { LuPipette } from "react-icons/lu";
+import { LuPencil } from "react-icons/lu";
 
 const DotIndicator = ({ activeIndex }: { activeIndex: number }) => (
     <div className={style.dot_wrap}>
@@ -52,15 +53,34 @@ export const LoginSecondComponent = () => (
 );
 
 export const LoginThirdPage = () => (
-    <div className={style.container} style={{ alignItems: "normal" }}>
+    <div className={style.container} style={{ alignItems: "normal", height: "95vh" }}>
         <DotIndicator activeIndex={2} />
         <h2 className={style.title}>첫 번째 캐릭터를 만들어주세요</h2>
         <p className={style.p_right_gray}>만든 캐릭터는 수정할 수 없어요.</p>
         <img src="/login/char1.png" alt="Character" />
+        <div style={{ display: "flex", justifyContent: "center", marginTop: "10px" }}>
+            <h2>엄지척도하니</h2>
+            <div className={style.level_tag}>Lv.1</div>
+            <h2><LuPencil style={{ color: "#6D6D6D", fontSize: "0.8em", marginLeft: "5px" }} /></h2>
+        </div>
+        <div style={{ marginTop: "auto" }}>
+            <div className={style.email_btn}>이메일로 시작하기</div>
+            <div style={{ display: "flex", marginTop: "5px", alignItems: "center" }}>
+                <div style={{ borderBottom: "2px dashed #6D6D6D", flex: 1 }}></div>
+                <p style={{ color: "#6D6D6D", fontWeight: "600", marginLeft: "10px", marginRight: "10px" }}>Or</p>
+                <div style={{ borderBottom: "2px dashed #6D6D6D", flex: 1 }}></div>
+            </div>
+            <div style={{ display: "flex", justifyContent: "space-between", marginTop: "5px" }}>
+                <div className={style.icons} style={{ backgroundColor: "#03C75A" }}><img src="/icon/naver.png" /></div>
+                <div className={style.icons} style={{ backgroundColor: "#FFCD00" }}><img src="/icon/kakao.png" /></div>
+                <div className={style.icons} style={{ backgroundColor: "white" }}><img src="/icon/apple.png" /></div>
+                <div className={style.icons} style={{ backgroundColor: "#4285F4" }}><img src="/icon/google.png" /></div>
+            </div>
+        </div>
     </div>
 );
 
-export const SelectMenu = () => {
+export const SelectMenu = ({ num, setNum }: { num: number, setNum: React.Dispatch<SetStateAction<number>> }) => {
     return (
         <div className={style.select_option}>
             <div style={{ display: "flex", alignItems: "center" }}>
@@ -76,15 +96,9 @@ export const SelectMenu = () => {
                 <div className={style.pic}><img src="/login/head5.png" /></div>
                 <div className={style.pic}><img src="/login/head6.png" /></div>
             </div>
-            <div className={style.next_btn_}>
+            <div className={style.next_btn_} onClick={() => setNum(num + 1)}>
                 이 캐릭터로 결정하기
             </div>
         </div>
-    )
-}
-
-export const LoginFinalPage = () => {
-    return (
-        <div></div>
     )
 }
