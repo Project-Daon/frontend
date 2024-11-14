@@ -1,0 +1,39 @@
+.edit {
+    padding: 20px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+}
+
+.edit>h2 {
+    font-size: calc(1em + 1.5vw);
+}
+
+.edit>p {
+    font-size: calc(0.75em + 1vw);
+    color: var(--color-light-gray);
+}
+
+.edit>input {
+    all: unset;
+    background-color: var(--color-primary-dark);
+    padding: 10px;
+    margin-top: 50px;
+    font-size: 1.3em;
+    font-weight: 600;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 0.5em;
+}
+
+.edit>.btn {
+    background-color: var(--color-primary);
+    color: black;
+    text-align: center;
+    font-weight: 600;
+    padding: 15px;
+    font-size: 1.3em;
+    border-radius: 0.4em;
+    margin-top: auto;
+}

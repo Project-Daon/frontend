@@ -61,7 +61,6 @@ export const LoginThirdPage = () => (
         <div style={{ display: "flex", justifyContent: "center", marginTop: "10px" }}>
             <h2>엄지척도하니</h2>
             <div className={style.level_tag}>Lv.1</div>
-            <h2><LuPencil style={{ color: "#6D6D6D", fontSize: "0.8em", marginLeft: "5px" }} /></h2>
         </div>
         <div style={{ marginTop: "auto" }}>
             <div className={style.email_btn}>이메일로 시작하기</div>
