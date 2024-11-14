@@ -1,0 +1,153 @@
+/* header */
+
+.header {
+    display: flex;
+    padding: 15px;
+}
+
+.header>.coin {
+    display: flex;
+    margin-right: auto;
+    align-items: center;
+}
+
+.header>.coin>p {
+    font-weight: 600;
+    margin-left: 5px;
+    font-size: 1.2em;
+}
+
+.header>.setting_icon {
+    color: var(--color-right-gray);
+}
+
+/* header */
+
+
+/* tags */
+.tags {
+    display: flex;
+    overflow-x: scroll;
+    padding-left: 3px;
+    position: relative;
+    -ms-overflow-style: none;
+    /* 인터넷 익스플로러 */
+    scrollbar-width: none;
+    /* 파이어폭스 */
+}
+
+.tags::-webkit-scrollbar {
+    display: none;
+}
+
+.tags>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.tags>div>img {
+    width: 50px;
+    height: 50px;
+}
+
+.tags>div>p {
+    font-size: 0.9em;
+    white-space: nowrap;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+/* tags */
+
+/* character */
+.character {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.character>.c_img {
+    width: calc(70% + 5vw);
+    aspect-ratio: 1/1;
+    display: flex;
+}
+
+.character>.char_desc {
+    display: flex;
+    align-items: center;
+}
+
+.character>.char_desc>p {
+    margin-left: 5px;
+    background-color: #0B0B97;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 1.2em;
+    font-weight: 600;
+}
+
+.character>.char_desc>.nick_edit {
+    font-size: 1.1em;
+    color: #6D6D6D;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+/* character */
+
+/* date */
+.date {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+    margin-top: 10px;
+    color: #6d6d6d;
+    align-items: center;
+}
+
+.date_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.select {
+    background-color: #870C0F;
+    color: white;
+    padding: 10px;
+    border-radius: 1.5em;
+}
+
+/* date */
+
+/* diary */
+.diary {
+    border-top: 1px solid #870C0F;
+    border-bottom: 1px solid #870C0F;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.diary>.text_wrap {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+}
+
+.diary>.text_wrap>div {
+    border: 1px solid #870C0F;
+    text-align: center;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1em + 3vw);
+    font-family: Writing;
+}
