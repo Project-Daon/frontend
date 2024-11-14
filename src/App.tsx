@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react"
 import { Route, Routes } from "react-router-dom"
+import MissionPage from "./pages/mission/index.tsx"
 
 function App() {
   const MainPage = lazy(() => import("./pages/main/index.tsx"))
@@ -20,6 +21,7 @@ function App() {
         <Route path="/edit" element={<EditPage />} />
         <Route path="/diarys" element={<DiaryPage />} />
         <Route path="/diarys/writing" element={<DiaryWritingPage />} />
+        <Route path="/mission" element={<MissionPage />} />
       </Routes>
     </Suspense>
   )

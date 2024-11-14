@@ -1,0 +1,50 @@
+.header {
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header>h2 {
+    font-size: 1.3em;
+}
+
+.header>div>.title {
+    font-size: 1.2em;
+    text-align: center;
+    color: var(--color-light-gray);
+    font-weight: 600;
+}
+
+
+
+.mission_tags {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.mission_tags>span {
+    border: 1px solid var(--color-light-gray);
+    color: var(--color-light-gray);
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 1.2em;
+}
+
+.item {
+    background-color: #9BCBFF;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.item>.desc {
+    margin-top: 10px;
+    color: black;
+}
