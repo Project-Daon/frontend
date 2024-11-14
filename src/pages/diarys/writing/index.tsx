@@ -1,6 +1,6 @@
 import { SaveComponent, WritingHeaderComponent, WritingSelectMood } from "./components";
 
-const DairyWritingPage = () => {
+const DiaryWritingPage = () => {
     return (
         <div style={{ display: "flex", flexDirection: "column" }}>
             <SaveComponent />
@@ -10,4 +10,4 @@ const DairyWritingPage = () => {
     )
 }
 
-export default DairyWritingPage;
+export default DiaryWritingPage;
