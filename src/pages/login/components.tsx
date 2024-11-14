@@ -1,7 +1,6 @@
 import React, { SetStateAction, useEffect, useState } from "react";
 import style from "./style.module.css";
 import { LuPipette } from "react-icons/lu";
-import { LuPencil } from "react-icons/lu";
 
 const DotIndicator = ({ activeIndex }: { activeIndex: number }) => (
     <div className={style.dot_wrap}>
