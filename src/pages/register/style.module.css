@@ -1,0 +1,55 @@
+.register {
+    padding: 30px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+}
+
+.register>h2 {
+    font-size: calc(1.4em + 1.5vw);
+}
+
+.register>p {
+    font-size: calc(1em + 1vw);
+    color: var(--color-light-gray);
+    margin-top: 5px;
+}
+
+.register>.form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.register>.form>label {
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+.register>.form>label {
+    color: var(--color-light-gray);
+}
+
+.register>.form>input {
+    all: unset;
+    background-color: var(--color-primary-dark);
+    padding: 10px;
+    flex: 1;
+    font-size: 1.3em;
+    font-weight: 600;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 0.5em;
+}
+
+.register>.btn {
+    background-color: var(--color-primary);
+    color: black;
+    text-align: center;
+    font-weight: 600;
+    padding: 15px;
+    font-size: 1.3em;
+    border-radius: 0.4em;
+    margin-top: auto;
+}

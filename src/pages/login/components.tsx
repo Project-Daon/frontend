@@ -62,7 +62,7 @@ export const LoginThirdPage = () => (
             <div className={style.level_tag}>Lv.1</div>
         </div>
         <div style={{ marginTop: "auto" }}>
-            <div className={style.email_btn}>이메일로 시작하기</div>
+            <div className={style.email_btn} onClick={() => location.replace("/login/email")}>이메일로 시작하기</div>
             <div style={{ display: "flex", marginTop: "5px", alignItems: "center" }}>
                 <div style={{ borderBottom: "2px dashed #6D6D6D", flex: 1 }}></div>
                 <p style={{ color: "#6D6D6D", fontWeight: "600", marginLeft: "10px", marginRight: "10px" }}>Or</p>
