@@ -1,6 +1,10 @@
 import { MissionHeaderComponent, MissionTagComponent } from "./components"
 import style from "./style.module.css"
+
+
 const MissionPage = () => {
+
+
     return (
         <div>
             <MissionHeaderComponent />
