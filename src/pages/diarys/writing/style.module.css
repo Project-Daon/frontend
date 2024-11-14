@@ -1,0 +1,90 @@
+/* header */
+
+.header {
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header>h2 {
+    font-size: 2em;
+}
+
+.header>div>.title {
+    font-size: 1.2em;
+    text-align: center;
+    color: var(--color-light-gray);
+    font-weight: 600;
+}
+
+.header>div>h2 {
+    text-decoration: underline;
+    text-underline-position: under;
+    font-size: 1.5em;
+}
+
+/* header */
+
+
+/* mood */
+.mood {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.mood>p {
+    font-family: Writing;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.mood>div {
+    display: flex;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    margin-top: 10px;
+}
+
+.mood>div>img {
+    margin-left: 10px;
+    width: 60px;
+    height: 60px;
+    opacity: 0.5;
+}
+
+.mood>textarea {
+    all: unset;
+    width: 100%;
+    aspect-ratio: 1/1.5;
+    margin-top: 10px;
+}
+
+.save {
+    position: absolute;
+    justify-content: center;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+
+}
+
+.save>div {
+    background-color: var(--color-modal);
+    bottom: 0;
+    border-radius: 1.4em;
+}
+
+.save>div>h2 {
+    color: var(--color-light-gray);
+    background-color: #2F2E32;
+    margin: 10px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 1.5em;
+}
