@@ -126,7 +126,7 @@ const TextToDiv = ({ text }: { text: string }) => {
 
     // 총 글자 수가 9의 배수가 되도록 공백 문자 추가
     while (chars.length % 9 !== 0) {
-        chars.push(' ');
+        chars.push('‎');
     }
     return (
         <div className={style.text_wrap}>
