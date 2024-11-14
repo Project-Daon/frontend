@@ -14,8 +14,8 @@ function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/edit" element={<EditPage />} />
-        <Route path="/dairys" element={<DiaryPage />} />
-        <Route path="/dairys/writing" element={<DiaryWritingPage />} />
+        <Route path="/diarys" element={<DiaryPage />} />
+        <Route path="/diarys/writing" element={<DiaryWritingPage />} />
       </Routes>
     </Suspense>
   )
