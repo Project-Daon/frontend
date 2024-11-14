@@ -1,0 +1,90 @@
+.header {
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header>h2 {
+    font-size: 1.3em;
+}
+
+.header>div>.title {
+    font-size: 1.2em;
+    text-align: center;
+    color: var(--color-light-gray);
+    font-weight: 600;
+}
+
+.header>div>h2 {
+    text-decoration: underline;
+    text-underline-position: under;
+    font-size: 1.5em;
+}
+
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.calendar>p {
+    font-size: 0.9em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.calendar>.items {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-row-gap: 15px;
+    text-align: center;
+}
+
+.diarys {
+    display: flex;
+    background-color: var(--color-primary-dark);
+    margin: 13px;
+    padding: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    align-items: center;
+    border-radius: 1.2em;
+}
+
+
+.diarys>.desc {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+}
+
+.diarys>.desc>.day {
+    background-color: var(--color-modal);
+    text-align: center;
+    padding: 8px;
+    width: 80px;
+    font-weight: 600;
+    border-radius: 1.2em;
+}
+
+.diarys>.desc>.title {
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 1.3em;
+}
+
+.diarys>.desc>.sub {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.diarys>.desc>.sub>span {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    color: var(--color-light-gray);
+}

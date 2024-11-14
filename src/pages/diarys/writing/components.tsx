@@ -24,7 +24,7 @@ export const WritingSelectMood = () => {
         <div className={style.mood}>
             <p>오늘의 기분을 골라주세요.</p>
             <div>
-                {
+                { // @ts-ignore
                     arr.map((a, i) => {
                         return (
                             <img src={`/mood/${i + 1}.png`} onClick={() => setClick(i + 1)} style={(i + 1) === click ? { opacity: 1 } : {}} />

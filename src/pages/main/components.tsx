@@ -18,7 +18,7 @@ export const MainHeaderComponent = () => {
 export const MainTagsComponent = () => {
     const data = [
         {
-            e: "daily",
+            e: "diarys",
             k: "일기보기"
         },
         {
@@ -49,7 +49,7 @@ export const MainTagsComponent = () => {
             {
                 data.map((item, i) => {
                     return (
-                        <div key={i}>
+                        <div key={i} onClick={() => location.replace(`/${item.e}`)}>
                             <img src={`/icon/${item.e}.png`} />
                             <p>{item.k}</p>
                         </div>
