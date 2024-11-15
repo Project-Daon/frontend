@@ -1,12 +1,12 @@
 import style from "./style.module.css"
 import { LuSettings, LuPencil } from "react-icons/lu";
 
-export const MainHeaderComponent = () => {
+export const MainHeaderComponent = ({ cash }: { cash: number }) => {
     return (
         <div className={style.header}>
             <div className={style.coin}  >
                 <img src="/icon/coin.png" />
-                <p>1620</p>
+                <p>{cash}</p>
             </div>
             <div className={style.setting_icon}>
                 <h2><LuSettings /></h2>
@@ -61,12 +61,12 @@ export const MainTagsComponent = () => {
     )
 }
 
-export const MainCharacterComponent = () => {
+export const MainCharacterComponent = ({ nickname }: { nickname: string | null }) => {
     return (
         <div className={style.character}>
             <img className={style.c_img} src="/char/char1.png" />
             <div className={style.char_desc}>
-                <h2>엄지척도하니</h2>
+                <h2>{nickname}</h2>
                 <p className={style.lvl}>Lv. 1</p>
                 <h2 className={style.nick_edit}><LuPencil /></h2>
             </div>

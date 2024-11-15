@@ -1,5 +1,7 @@
 import { useState } from "react";
 import style from "./style.module.css"
+import { login } from "../../../utils/http";
+import { setCookie } from "../../../utils/cookies";
 
 const LoginEmailPage = () => {
     const [name, setName] = useState("");
@@ -21,7 +23,16 @@ const LoginEmailPage = () => {
             </div>
 
             <div className={style.btn} onClick={() => {
-                alert("여기서 로그인 로직 연결하셈")
+                login(name, pwd)
+                    .then((result) => {
+                        setCookie("access_token", result.accessToken)
+                        setCookie("refresh_token", result.refreshToken);
+                        location.replace("/")
+                    })
+                    //@ts-ignore
+                    .catch((error) => {
+                        alert("아이디 또는 비밀번호를 다시 확인해주세요.")
+                    })
             }}>가입하고 시작하기</div>
         </div>
     )

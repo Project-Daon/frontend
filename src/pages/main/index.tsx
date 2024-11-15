@@ -1,32 +1,39 @@
 import { MainCharacterComponent, MainDateComponent, MainDiaryComponent, MainHeaderComponent, MainTagsComponent } from "./components";
-import { useEffect } from "react"
-import { getCookie } from "../../utils/cookies"
-import axios from "axios"
-import { apihost } from "../../utils/host"
+import { useEffect, useState } from "react";
+import { getCookie } from "../../utils/cookies";
+import { get_userdata } from "../../utils/http";
+
+interface DataType {
+    cash: number,
+    disable: boolean,
+    email: string,
+    id: string,
+    nickname: string,
+    provider: string,
+    username: string
+}
 
 const MainPage = () => {
+    const [data, setData] = useState<DataType>();
 
     useEffect(() => {
-        const token = getCookie("access_token");
-
-        axios.get(apihost + "/users/@me", {
-            headers: {
-                "Authorization Bearer": token
-            },
-            withCredentials: true
-        }).catch(() => {
-            location.replace("/login") // 200이 아니라면 로그인 페이지로 이동
-        }).then(() => {
-
-        })
+        const access_token = getCookie("access_token");
+        get_userdata(access_token)
+            .then((result) => {
+                setData(result);
+            })
+            //@ts-ignore
+            .catch((error) => {
+                // location.replace("/login")
+            })
 
     }, [])
 
     return (
-        <div>
-            <MainHeaderComponent />
+        data === undefined ? null : <div style={{ display: "flex", flexDirection: "column", height: "100%", justifyContent: "space-between" }}>
+            <MainHeaderComponent cash={data.cash} />
             <MainTagsComponent />
-            <MainCharacterComponent />
+            <MainCharacterComponent nickname={data.nickname} />
             <MainDateComponent />
             <MainDiaryComponent />
         </div>
