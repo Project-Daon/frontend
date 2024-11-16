@@ -33,6 +33,9 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: 🏗 Setup repo
+        uses: actions/checkout@v2
+        
       - name: 🏗 Remove Exist Files
         uses: appleboy/ssh-action@v1.1.0
         with:
