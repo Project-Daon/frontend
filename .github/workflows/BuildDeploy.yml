@@ -47,3 +47,12 @@ jobs:
           port: ${{ secrets.PORT }}
           source: "./dist/*"
           target: "~/frontend"
+
+      - name: 🏗 Remove Exist Files
+        uses: appleboy/ssh-action@v1.1.0
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: "cd ~/frontend/dist && mv ./* ../ && cd .. && rm -r dist"
