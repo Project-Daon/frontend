@@ -3,6 +3,15 @@ import { LuChevronLeft } from "react-icons/lu";
 import { LuBookmark } from "react-icons/lu";
 import { LuCoins } from "react-icons/lu";
 
+
+interface DataType {
+    content: string,
+    date: string,
+    feel: number,
+    title: string,
+    weather: number
+}
+
 export const DiaryHeaderComponent = () => {
     return (
         <div className={style.header}>
@@ -65,18 +74,18 @@ export const CalendarComponent = () => {
     )
 }
 
-export const DiaryItemComponent = () => {
+export const DiaryItemComponent = ({ item }: { item: DataType }) => {
     return (
-        <div className={style.diarys}>
+        <div className={style.diarys} onClick={() => location.replace(`/diarys/view?date=${item.date}`)}>
             <div className={style.desc}>
-                <div className={style.day}>5일</div>
-                <div className={style.title}>행복해지는 방법</div>
+                <div className={style.day}>{item.date.slice(6, 8)}일</div>
+                <div className={style.title}>{item.title}</div>
                 <div className={style.sub}>
                     <span><LuBookmark />보관</span>
                     <span style={{ marginLeft: "10px" }}><LuCoins />100</span>
                 </div>
             </div>
-            <img src="/mood/1.png" style={{ height: "60px" }} />
+            <img src={`/mood/${item.feel}.png`} style={{ height: "60px" }} />
         </div>
     )
 }

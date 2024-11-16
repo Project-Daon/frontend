@@ -24,7 +24,7 @@ const MainPage = () => {
             })
             //@ts-ignore
             .catch((error) => {
-                // location.replace("/login")
+                location.replace("/login")
             })
 
     }, [])

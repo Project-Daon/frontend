@@ -139,7 +139,7 @@ const TextToDiv = ({ text }: { text: string }) => {
 
 export const MainDiaryComponent = () => {
     return (
-        <div className={style.diary}>
+        <div className={style.diary} onClick={() => location.replace("/diarys/writing")}>
             <TextToDiv text="10월 12일." />
             <TextToDiv text="날씨: 맑음" />
             <TextToDiv text=" " />

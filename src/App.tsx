@@ -10,6 +10,7 @@ function App() {
   const EditPage = lazy(() => import("./pages/edit/index.tsx"))
 
   const DiaryPage = lazy(() => import("./pages/diarys/index.tsx"))
+  const DiaryViewPage = lazy(() => import("./pages/diarys/view/index.tsx"))
   const DiaryWritingPage = lazy(() => import("./pages/diarys/writing/index.tsx"))
   return (
     <Suspense fallback={<div>로딩중입니다.</div>}>
@@ -20,8 +21,10 @@ function App() {
         <Route path="/login/email" element={<LoginEmailPage />} />
         <Route path="/edit" element={<EditPage />} />
         <Route path="/diarys" element={<DiaryPage />} />
+        <Route path="/diarys/view" element={<DiaryViewPage />} />
         <Route path="/diarys/writing" element={<DiaryWritingPage />} />
         <Route path="/mission" element={<MissionPage />} />
+        <Route path="/*" element={<div>준비중인 페이지입니다!</div>} />
       </Routes>
     </Suspense>
   )

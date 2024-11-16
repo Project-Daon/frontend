@@ -24,10 +24,16 @@ export const daon_request = async <T = any>({
             headers,
             data,
             params,
-            withCredentials: true
+            withCredentials: true,
+            timeout: 5000
         });
         return response.data; // 요청 성공 시 데이터 반환
     } catch (error) {
+        //@ts-ignore
+        if (error.code === 'ECONNABORTED') {
+            alert("요청이 타임아웃되었습니다. 잠시 후 시도해주세요.")
+        }
+
         console.error('Error during fetchData:', error);
         throw error; // 에러를 호출한 곳으로 전달
     }
@@ -48,7 +54,9 @@ export const get_diary = async (token: string, date: string) => {
         url: apihost + "/diary/",
         method: "GET",
         headers: {
-            "Authorization": `Bearer ${token}`,
+            "Authorization": `Bearer ${token}`
+        },
+        params: {
             date: date
         }
     })

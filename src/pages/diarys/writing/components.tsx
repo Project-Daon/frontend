@@ -5,12 +5,14 @@ import { LuCamera } from "react-icons/lu";
 import { AiFillAudio } from "react-icons/ai";
 
 export const WritingHeaderComponent = () => {
+    const [title, setTitle] = useState("");
+
     return (
         <div className={style.header}>
             <h2 onClick={() => location.replace("/diarys")}><LuChevronLeft /></h2>
             <div>
                 <p className={style.title}>제목</p>
-                <h2>2024.10.14</h2>
+                <input placeholder="제목을 작성해주세요." value={title} onChange={(e) => { setTitle(e.target.value) }}></input>
             </div>
             <h2 style={{ opacity: 0 }}><LuChevronLeft /></h2>
         </div>
