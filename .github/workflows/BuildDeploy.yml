@@ -1,4 +1,4 @@
-name: Build & Publish with ssh
+name: Build & Deploy with ssh
 
 on:
   push:
@@ -29,7 +29,7 @@ jobs:
       - name: 📦 Build
         run: yarn build
 
-  publish:
+  deploy:
     needs: build
     steps:
       - name: 🏗 Remove Exist Files
