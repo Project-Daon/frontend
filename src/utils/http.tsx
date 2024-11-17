@@ -10,7 +10,7 @@ interface FetchDataOptions {
     params?: Record<string, any>; // 쿼리 파라미터
 }
 
-export const daon_request = async <T = any>({
+const daon_request = async <T = any>({
     url,
     method = 'GET',
     headers = {},
@@ -63,14 +63,14 @@ export const get_diary = async (token: string, date: string) => {
     return response;
 }
 
-export const writing_diary = async (token: string, text: string) => {
+export const writing_diary = async (token: string, title: string, text: string, feel: number, weather: number) => {
     const response = await daon_request({
         url: apihost + "/diary/",
         method: "POST",
         headers: {
             "Authorization": `Bearer ${token}`
         },
-        data: { content: text }
+        data: { title: title, content: text, feel: feel, weather: weather }
     })
     return response;
 }

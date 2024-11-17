@@ -10,7 +10,8 @@ interface DataType {
     id: string,
     nickname: string,
     provider: string,
-    username: string
+    username: string,
+    today: boolean
 }
 
 const MainPage = () => {
@@ -35,7 +36,7 @@ const MainPage = () => {
             <MainTagsComponent />
             <MainCharacterComponent nickname={data.nickname} />
             <MainDateComponent />
-            <MainDiaryComponent />
+            <MainDiaryComponent today={data.today} />
         </div>
     )
 }

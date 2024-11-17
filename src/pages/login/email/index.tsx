@@ -33,7 +33,7 @@ const LoginEmailPage = () => {
                     .catch((error) => {
                         alert("아이디 또는 비밀번호를 다시 확인해주세요.")
                     })
-            }}>가입하고 시작하기</div>
+            }}>로그인하기</div>
         </div>
     )
 }

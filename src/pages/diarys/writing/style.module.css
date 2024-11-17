@@ -25,6 +25,7 @@
     text-decoration: underline;
     text-underline-position: under;
     font-size: 1.5em;
+    width: 100%;
 }
 
 /* header */
@@ -72,7 +73,7 @@
     display: flex;
     width: 100%;
     margin-bottom: 30px;
-
+    z-index: 999;
 }
 
 .save>div {
@@ -89,4 +90,5 @@
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 1.5em;
+    cursor: pointer;
 }

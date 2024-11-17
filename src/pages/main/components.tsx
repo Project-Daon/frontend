@@ -137,9 +137,10 @@ const TextToDiv = ({ text }: { text: string }) => {
     );
 };
 
-export const MainDiaryComponent = () => {
+export const MainDiaryComponent = ({ today }: { today: boolean }) => {
+    const endpoint = today ? "" : "/writing"
     return (
-        <div className={style.diary} onClick={() => location.replace("/diarys/writing")}>
+        <div className={style.diary} onClick={() => location.replace("/diarys" + endpoint)}>
             <TextToDiv text="10월 12일." />
             <TextToDiv text="날씨: 맑음" />
             <TextToDiv text=" " />
