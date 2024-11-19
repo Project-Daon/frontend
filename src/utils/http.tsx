@@ -49,6 +49,15 @@ export const login = async (id: string, password: string) => {
     return response;
 }
 
+export const register = async (id: string, password: string) => {
+    const response = await daon_request({
+        url: apihost + "/register",
+        method: "POST",
+        data: { id: id, password: password }
+    })
+    return response;
+}
+
 export const get_diary = async (token: string, date: string) => {
     const response = await daon_request({
         url: apihost + "/diary/",

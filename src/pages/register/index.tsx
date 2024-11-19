@@ -1,5 +1,7 @@
 import { useState } from "react";
 import style from "./style.module.css"
+import { register } from "../../utils/http";
+import { useNavigate } from "react-router-dom";
 
 const checkpwd = (a: string, b: string) => {
     return a === b ? true : false;
@@ -9,7 +11,7 @@ const RegisterPage = () => {
     const [name, setName] = useState("");
     const [pwd, setPwd] = useState("");
     const [repwd, setRePwd] = useState("");
-
+    const navi = useNavigate();
 
     return (
         <div className={style.register}>
@@ -31,7 +33,16 @@ const RegisterPage = () => {
 
             <div className={style.btn} onClick={() => {
                 if (checkpwd(pwd, repwd)) {
-                    alert("회원가입 진행합니다.")
+                    register(name, pwd)
+                        .then((result) => {
+                            if (result.code === "SUCCESS") {
+                                alert("회원가입이 완료되었습니다. 로그인해주세요.")
+                                navi("/login/email");
+                            } else {
+                                alert("서버 측에 오류가 발생했습니다. 잠시 후 시도해주세요.")
+                            }
+                        })
+                        .catch((error) => { alert(error.response.data.message) })
                 } else {
                     alert("비밀번호가 동일하지 않습니다. 다시 확인해주세요.")
                 }
